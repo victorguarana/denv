@@ -4,4 +4,4 @@ build:
 	docker build -t $(IMAGE_NAME) .
 
 run:
-	docker run -p 8080:80 $(IMAGE_NAME)
+	docker run -p 8080:80 -h ${IMAGE_NAME} --network my-net $(IMAGE_NAME)
